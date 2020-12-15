@@ -90,7 +90,12 @@ public class ResourceAllocator {
 		}
 		return count;
 	}
-	
+	public void getCosts(double maxCost,int totalHours) {
+		getCosts(maxCost,0,totalHours);
+	}
+	public void getCosts(int cpu,int totalHours) {
+		getCosts(0.0,cpu,totalHours);
+	}
 	public void getCosts(double maxCost,int cpu, int totalHours) {
 		/**
 		Compute the output based on the inputs given

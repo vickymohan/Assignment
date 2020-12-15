@@ -31,7 +31,7 @@ public class TestResourceAllocator {
 
 	@Test
 	public void testServersForAGivenCPUCount() {
-		resources.getCosts(0.0, 20, 8);//CPU Count given but No Cost Constraint
+		resources.getCosts(20, 8);//CPU Count given but No Cost Constraint
 		//read the console output(JSON Output)
 		String output = outputStreamCaptor.toString();
 		try {
@@ -47,7 +47,7 @@ public class TestResourceAllocator {
 	
 	@Test
 	public void testServersForAGivenCost() {
-		resources.getCosts(29.00, 0, 8);//Cost given but No CPU Constraint
+		resources.getCosts(29.00, 8);//Cost given but No CPU Constraint
 		//read the console output(JSON Output)
 		String output = outputStreamCaptor.toString();
 		try {
